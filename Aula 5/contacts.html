@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contacts</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #myTab {
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fa fa-leaf"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html"><i
+                        class="fa fa-home"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="products.html"><i
+                        class="fa fa-folder-open"></i>Products</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"><i
+                        class="fa fa-address-book"></i>Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aveiro-tab" data-bs-toggle="tab" data-bs-target="#aveiro" type="button"
+                    role="tab"
+                    aria-controls="aveiro" aria-selected="true">Aveiro
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="vila-real-tab" data-bs-toggle="tab" data-bs-target="#vila-real" type="button"
+                    role="tab" aria-controls="vila-real" aria-selected="false">Vila Real
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="faro-tab" data-bs-toggle="tab" data-bs-target="#faro" type="button" role="tab"
+                    aria-controls="faro" aria-selected="false">Faro
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show" id="aveiro" role="tabpanel" aria-labelledby="aveiro-tab">
+            <fieldset>
+                <legend>Aveiro</legend>
+                <hr>
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="row">Street</th>
+                        <td>R Duotor Alfredo Freitas 105</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City</th>
+                        <td>Arrifana</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">State Full</th>
+                        <td>Aveiro</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zip Code</th>
+                        <td>3700-529</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phone Number</th>
+                        <td>+351 234 130 1828</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="tab-pane fade" id="vila-real" role="tabpanel" aria-labelledby="vila-real-tab">
+            <fieldset>
+                <legend>Vila Real</legend>
+                <hr>
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="row">Street</th>
+                        <td>Rua Loreto 7</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City</th>
+                        <td>Chaves</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">State Full</th>
+                        <td>Vila Real</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zip Code</th>
+                        <td>5400-161</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phone Number</th>
+                        <td>+351 259 104 6399</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="tab-pane fade" id="faro" role="tabpanel" aria-labelledby="faro-tab">
+            <fieldset>
+                <legend>Faro</legend>
+                <hr>
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="row">Street</th>
+                        <td>R Duotor Alfredo Freitas 105</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City</th>
+                        <td>Arrifana</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">State Full</th>
+                        <td>Aveiro</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zip Code</th>
+                        <td>3700-529</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phone Number</th>
+                        <td>+351 234 130 1828</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+<!-- bottom navbar -->
+<div class="navbar navbar-dark fixed-bottom bg-dark" role="navigation">
+    <div class="container">
+        <div class="navbar-text small">&copy;ITW2022 - Introduction to Web Technologies</div>
+        <div class="navbar-right navbar-text small d-none d-md-block"><a href="https://www.ua.pt"
+                                                                         title="University of Aveiro">University of
+            Aveiro</a></div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
