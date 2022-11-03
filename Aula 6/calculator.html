@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- My Script -->
+    <script src="myScript.js">
+    </script>
+</head>
+<body>
+
+<h1><i class="fa fa-calculator"></i> Calculator!</h1>
+
+<label for="op1"></label><input type="number" id="op1" class="form-control-lg form-">
+
+<label for="op2">
+    <select id="op2" class="form-control-lg">
+        <option selected="selected" value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="x">x</option>
+    </select>
+</label>
+<label for="op3"></label><input type="number" id="op3" class="form-control-lg">
+<label for="answ"></label><input type="number" value="/" id="answ" class="form-control-lg">
+<br>
+<hr>
+<button class="btn btn-primary" type="submit" onclick="calculate()">Calculate</button>
+
+
+</body>
+</html>
