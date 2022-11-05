@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <title>Test Form</title>
+    <style>
+        body{
+            font-family: "Open Sans", sans-serif;
+            font-size: large;
+        }
+        table{
+            width: 100%;
+        }
+        .right-side, select{
+            width: 100%;
+        }
+        #buttons{align-items: center}
+
+    </style>
 </head>
 <body>
+<form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <table>
+            <tr>
+                <td>Curso</td>
+                <td class="right-side">
+                    <label>
+                        <select name="curso">
+                            <option value="1" selected="selected">Informatics</option>
+                            <option value="2">Economics</option>
+                            <option value="3">Biology</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nome:</td>
+                <td><label>
+                    <input class="right-side" type="text" name="FirstName" placeholder="Nome"/>
+                </label></td>
+            </tr>
+
+            <tr>
+                <td>Sobrenome</td>
+                <td><label>
+                    <input class="right-side" type="text" name="LastName" placeholder="Sobrenome"/>
+                </label></td>
+            </tr>
+
+            <tr>
+                <td>Palavra-Passe:</td>
+                <td><label><input class="right-side" type="password" name="Password" placeholder="Digite a palavra passe"></label></td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Comentários:</legend>
+        <label>
+            <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>
+        </label>
+    </fieldset>
+
+    <table width="100%">
+        <tr>
+            <td width="50%">
+                <fieldset>
+                    <legend>Meios de Transporte</legend>
+                    <label>
+                        <input type="checkbox" name="vehicle" value="Bicicleta">
+                    </label>Bicicleta<br/>
+                    <label>
+                        <input type="checkbox" name="vehicle" value="Carro">
+                    </label>Carro<br/>
+                    <label>
+                        <input type="checkbox" name="vehicle" value="Comboio">
+                    </label>Comboio<br/>
+                </fieldset>
+            </td>
+            <td width="50%">
+                <fieldset>
+                    <legend>Cor Preferida</legend>
+                    <label>
+                        <input type="radio" name="color" value="Azul">
+                    </label>Azul<br/>
+                    <label>
+                        <input type="radio" name="color" value="Verde">
+                    </label>Verde<br/>
+                    <label>
+                        <input type="radio" name="color" value="Vermelho">
+                    </label>Vermelho<br/>
+                    <label>
+                        <input type="radio" name="color" value="Outra">
+                    </label>Outra
+                </fieldset>
+            </td>
+        </tr>
+
+    </table>
+
+    <div id="buttons">
+        <input name="Button" type="Submit"/>
+        <input type="reset" name="resetBtn" value="Reset"/>
+    </div>
+
+</form>
 
 </body>
 </html>
