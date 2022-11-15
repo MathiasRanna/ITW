@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jogo javascript</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        piece {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            border: dotted 1px black;
+            left: 232px;
+            top: 173px;
+        }
+
+        piece:hover {
+            opacity: .8;
+        }
+
+        #azul {
+            background-color: blue;
+        }
+
+        #vermelho {
+            background-color: red;
+        }
+
+        #verde {
+            background-color: green;
+        }
+
+        #amarelo {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="page-header" id="header"><h2>O meu joguinho ... <i class="fa fa-smile-o"></i></h2>
+        <hr>
+    </div>
+    <button onclick="scramble()" class="btn btn-primary">Scramble</button>
+    <br>
+    <span id="currentInfo"></span>
+    <piece id="azul" onmouseover="setCurrentDiv()" onmouseout="clearSelected()"></piece>
+    <piece id="vermelho" onmouseover="setCurrentDiv()" onmouseout="clearSelected()"></piece>
+    <piece id="verde" onmouseover="setCurrentDiv()" onmouseout="clearSelected()"></piece>
+    <piece id="amarelo" onmouseover="setCurrentDiv()" onmouseout="clearSelected()"></piece>
+</div>
+<script>
+    function scramble() {
+        const minTopHeight = document.getElementById("header").offsetHeight;
+        const maxHeight = window.innerHeight;
+        const restrictedHeight = document.getElementById("currentInfo").offsetTop + document.getElementById("currentInfo").offsetHeight;
+        const restrictedWidth = document.getElementById("currentInfo").offsetLeft + document.getElementById("currentInfo").offsetWidth;
+        const maxWidth = window.innerWidth;
+
+        const pieces = document.getElementsByTagName('piece');
+        for (const piece of pieces) {
+            const squareHeight = Math.floor(Math.random() * (maxHeight - minTopHeight) + minTopHeight);
+            const squareWidth = Math.floor(Math.random() * maxWidth) + 1;
+            do {
+                const squareHeight = Math.floor(Math.random() * (maxHeight - minTopHeight) + minTopHeight);
+                const squareWidth = Math.floor(Math.random() * maxWidth) + 1;
+            }
+            while (squareHeight < restrictedHeight && squareWidth < restrictedWidth);
+
+            piece.style.top = squareHeight + "px";
+            piece.style.left = squareWidth + "px";
+            console.log(piece, squareHeight + "px;", piece.style.top);
+        }
+    }
+
+    function setCurrentDiv() {
+        document.getElementById("currentInfo").innerText = "Hey! I am " + event.target.id + "\n Top:" + event.target.offsetTop + "px; \n Left: " + event.target.offsetLeft + "px;";
+    }
+
+    function clearSelected() {
+        document.getElementById("currentInfo").innerText = "";
+    }
+
+    window.onload = scramble;
+</script>
+</body>
+</html>

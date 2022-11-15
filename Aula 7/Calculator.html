@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        #main-container.container {
+            width: 60%;
+            border: #bbbbbb 1px solid;
+            align-content: center;
+        }
+
+        .row {
+            margin: 10px 0;
+            align-items: center;
+        }
+
+        button {
+            background-color: gray;
+            padding: 15px 70px;
+        }
+
+        #textarea {
+            border: #333333 1px solid;
+            height: 45px;
+            margin: 15px 0;
+            background-color: ghostwhite;
+            font: 30px bold;
+            align-content: center;
+        }
+
+        #clr-btn {
+            background-color: red;
+        }
+
+        #eql {
+            background-color: dodgerblue;
+        }
+
+        .btn-secondary {
+            padding: 10px 70px;
+        }
+    </style>
+</head>
+<body>
+
+<div  class="container">
+    <h1 class="h1"><i class="fa fa-calculator"></i> Calculator</h1>
+    <hr>
+    <div id="main-container" class="container">
+        <div id="textarea"></div>
+        <div class="row">
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="1">1</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="2">2</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="3">3</button>
+            </div>
+            <div class="col-3">
+                <button class="operation btn btn-secondary" value="+">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="4">4</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="5">5</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="6">6</button>
+            </div>
+            <div class="col-3">
+                <button class="operation btn btn-secondary" value="-">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="7">7</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="8">8</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="9">9</button>
+            </div>
+            <div class="col-3">
+                <button class="operation btn btn-secondary" value="*">*</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3" id="clear">
+                <button class="btn btn-secondary" id="clr-btn" value="C">C</button>
+            </div>
+            <div class="col-3">
+                <button class="number btn btn-secondary" value="0">0</button>
+            </div>
+            <div class="col-3" id="equals">
+                <button class="btn btn-secondary" id="eql" value="=">=</button>
+            </div>
+            <div class="col-3">
+                <button class="operation btn btn-secondary" value="/">/</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+<script src="Calculator.js"></script>
+</body>
+</html>
