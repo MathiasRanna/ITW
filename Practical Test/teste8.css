@@ -1,0 +1,21 @@
+﻿/* TODO: escrever o código em falta aqui... */
+
+body{
+    font-family: Open-Sans, serif;
+}
+
+.bannerTop{
+    height: 360px;
+    margin: auto;
+    border-bottom: solid 1px #444;
+    border-top: solid 1px #444;
+    background-image: url('banner.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input-group{
+    margin: 15px;
+    padding: 10px;
+}
