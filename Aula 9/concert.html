@@ -28,13 +28,15 @@
             <div class="form-floating mb-3 col-6">
                 <input type="text" class="form-control" id="address" pattern=".{20, 200}" required>
                 <label for="address" class="form-label">Address</label>
+                <div class="invalid-feedback"><i class="fa fa-warning"></i>Insert address more than 20 characters</div>
             </div>
         </div>
         <div class="row g-2">
             <div class="mb-3 col-6">
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" required>
                     <label for="email" class="form-label">Email</label>
+                    <div class="invalid-feedback"><i class="fa fa-warning"></i>Insert correct email</div>
                 </div>
                 <div class="form-floating">
                     <textarea type="" id="addInfo" class="form-control"></textarea>
@@ -44,20 +46,21 @@
             <div class="form-floating mb-3 col-6 border">
                 <div class="border-bottom"><h6>Select seat</h6></div>
                 <div class="form-check">
-                    <input class="form-check-input" id="frontGrass" type="checkbox">
+                    <input class="form-check-input" id="frontGrass" type="checkbox" name="ticket-class" value="100">
                     <label for="frontGrass" class="form-label">Front Grass - 100€</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="rearGrass" type="checkbox">
+                    <input class="form-check-input" id="rearGrass" type="checkbox" name="ticket-class" value="80">
                     <label for="rearGrass" class="form-label">Rear Grass - 80€</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="rearStand" type="checkbox">
+                    <input class="form-check-input" id="rearStand" type="checkbox" name="ticket-class" value="65">
                     <label for="rearStand" class="form-label">Rear Stand - 65€</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="sideStand" type="checkbox">
+                    <input class="form-check-input" id="sideStand" type="checkbox" name="ticket-class" value="50">
                     <label for="sideStand" class="form-label">Side Stand - 50€</label>
+                    <div class="invalid-feedback"><i class="fa fa-warning"></i>Choose at least 2 options</div>
                 </div>
             </div>
         </div>
