@@ -1,110 +1,40 @@
-﻿window.onload = setSelect();
+﻿// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
 
-// Self-executing function
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
 
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
                 }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
 
+                form.classList.add('was-validated')
+            }, false)
+        })
+})()
 
-// function valida() {
-//     //--- TODO: escrever o código em falta aqui...
-//     //--- Se a função retornar true o formulário será enviado;
-//     //--- Se a função retornar false, o formulário não será enviado.
-//     // Example starter JavaScript for disabling form submissions if there are invalid fields
-//
-//
-//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//     var forms = document.querySelectorAll('.needs-validation')
-//
-//     // Loop over them and prevent submission
-//     Array.prototype.slice.call(forms)
-//         .forEach(function (form) {
-//             form.addEventListener('submit', function (event) {
-//                 if (!form.checkValidity()) {
-//                     event.preventDefault()
-//                     event.stopPropagation()
-//                 }
-//
-//                 form.classList.add('was-validated')
-//             }, false)
-//         })
-// }
+function valida() {
+    //--- TODO: escrever o código em falta aqui...
+    //--- Se a função retornar true o formulário será enviado; 
+    //--- Se a função retornar false, o formulário não será enviado.
+}
 
 function limpa() {
     //--- TODO: escrever o código em falta aqui...
-    const form = document.getElementById("form_element");
-    form.reset();
 }
 
 function setSelect() {
     //--- TODO: escrever o código em falta aqui...
-    const selectField = document.getElementById("field_4");
-
-    selectField.appendChild(new Option('Loira', 'Loira'));
-    selectField.appendChild(new Option('Morena', 'Morena'));
-    selectField.appendChild(new Option('Muçulmana', 'Muçulmana'));
-    selectField.appendChild(new Option('Negra', 'Negra'));
-    selectField.appendChild(new Option('Barba', 'Barba'));
-    selectField.appendChild(new Option('Bigode', 'Bigode'));
-    selectField.appendChild(new Option('Loiro', 'Loiro'));
-    selectField.appendChild(new Option('Negro', 'Negro'));
-
 }
 
 function setImage() {
     //--- TODO: escrever o código em falta aqui...
-    switch (event.target.value) {
-        case "Loira":
-            document.getElementById("avatar").value = "https://cutt.ly/9eIsV5B";
-            document.getElementById("avatarImg").src = "https://cutt.ly/9eIsV5B";
-            break;
-        case "Morena":
-            document.getElementById("avatar").value = "https://cutt.ly/jeIsBYP";
-            document.getElementById("avatarImg").src = "https://cutt.ly/jeIsBYP";
-            break;
-        case "Muçulmana":
-            document.getElementById("avatar").value = "https://cutt.ly/reIsXOJ";
-            document.getElementById("avatarImg").src = "https://cutt.ly/reIsXOJ";
-            break;
-        case "Negra":
-            document.getElementById("avatar").value = "https://cutt.ly/KeIsNga";
-            document.getElementById("avatarImg").src = "https://cutt.ly/KeIsNga";
-            break;
-        case "Barba":
-            document.getElementById("avatar").value = "https://cutt.ly/5eIs6rL";
-            document.getElementById("avatarImg").src = "https://cutt.ly/5eIs6rL";
-            break;
-        case "Bigode":
-            document.getElementById("avatar").value = "https://cutt.ly/AeIs6MU";
-            document.getElementById("avatarImg").src = "https://cutt.ly/AeIs6MU";
-            break;
-        case "Loiro":
-            document.getElementById("avatar").value = "https://cutt.ly/4eIs4X0";
-            document.getElementById("avatarImg").src = "https://cutt.ly/4eIs4X0";
-            break;
-        case "Negro":
-            document.getElementById("avatar").value = "https://cutt.ly/geIdez2";
-            document.getElementById("avatarImg").src = "https://cutt.ly/geIdez2";
-            break;
-        default:
-            document.getElementById("avatar").value = "";
-            document.getElementById("avatarImg").src = "https://cutt.ly/geIdQJZ";
-    }
 }
 
 // FÓRMULAS
