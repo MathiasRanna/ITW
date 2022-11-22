@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather-App</title>
+    <!-- Google fonts and other fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="Weather-Jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <label for="citySelector">City:</label>
+    <select id="citySelector" class="form-select">
+        <option value="">Select a city name</option>
+        <option value="Aveiro, PT">Aveiro</option>
+        <option value="Porto, PT">Porto</option>
+        <option value="Paris, FR">Paris</option>
+        <option value="London, UK">London</option>
+        <option value="New York, US">New York</option>
+    </select>
+    <table class="table table-striped d-none">
+        <tr>
+            <td class="col-md-2">City name:</td>
+            <td class="col-md-10" id="cityName"></td>
+        </tr>
+        <tr>
+            <td class="col-md-2">Coordinates:</td>
+            <td class="col-md-10" id="coordinates"></td>
+        </tr>
+        <tr>
+            <td class="col-md-2">Weather:</td>
+            <td class="col-md-10" id="weather"></td>
+        </tr>
+        <tr>
+            <td class="col-md-2">Temperature:</td>
+            <td class="col-md-10" id="temperature"></td>
+        </tr>
+        <tr>
+            <td class="col-md-2">Air pressure:</td>
+            <td class="col-md-10" id="airPressure"></td>
+        </tr>
+        <tr>
+            <td class="col-md-2">Collected data:</td>
+            <td class="col-md-10" id="allData"></td>
+        </tr>
+    </table>
+</div>
+
+<!-- Bootstrap script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
