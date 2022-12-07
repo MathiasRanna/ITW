@@ -19,7 +19,7 @@
         //--- Variáveis do viewmodel
         //---
         //-- Fazemos sempre a cópia da variável 'this' para outra variável, pois o 'this' varia consoante o contexto
-        var self = this;        
+        let self = this;
         //--- Variável contendo um Participante tmp. Usado nas operações de EDIT
         self.tmp = null;
         //--- Array de Observáveis contendo a LISTA de participantes
@@ -50,7 +50,7 @@
             //--- ordena a lista alfabeticamente pelo nome
             self.participants.sort(
                 function (left, right) {
-                    return left.name == right.name ? 0 : (left.name < right.name ? -1 : 1);
+                    return left.name === right.name ? 0 : (left.name < right.name ? -1 : 1);
                 });
             $("#createParticipantModal").modal('toggle');
         };
@@ -62,7 +62,7 @@
             $("#exampleInputEmail2").val(participant.email);
             $("#exampleInputAddress2").val(participant.address);
             $("#exampleInputBirthDate2").val(participant.birthDate);
-            if (participant.sex != '') {
+            if (participant.sex !== '') {
                 $("#readParticipantModal [name = exampleInputSex2][value=" + participant.sex + "]").prop('checked', true);
             }
             else {
@@ -108,7 +108,7 @@
             //--- ordena a lista alfabeticamente pelo nome
             self.participants.sort(
                 function (left, right) {
-                    return left.name == right.name ? 0 : (left.name < right.name ? -1 : 1)
+                    return left.name === right.name ? 0 : (left.name < right.name ? -1 : 1)
                 });
             //--- apaga a modal
             $("#readParticipantModal").modal('toggle');
